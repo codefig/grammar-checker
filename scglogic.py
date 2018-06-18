@@ -18,7 +18,7 @@ verb_output = "|". join("'" + str(x.lower()) +
                         "'" for x in verb_list if x is not '')
 
 
-def perform_xcg(sentence):
+def perform_scg(sentence):
 	gramma_string = (" SIGMA -> DELTA\n"
                         " DELTA -> S P C|S P C A|S P A|S P\n"
                         " S -> h |h m\n"
@@ -42,6 +42,10 @@ def perform_xcg(sentence):
 	return output
 
 # result = perform_psg("bísọ́lá shè ọkọ̀ náà")
-result = perform_xcg("Iná n jó ní ẹ̀yìnkùnlé")
-print(result)
+# result = perform_scg("Iná n n jó ní ẹ̀yìnkùnlé")
+# # print(result)
+# # esult = perform_psg("bísọ́lá wọ wọ ọkọ̀ náà")/
+# print(str(result).encode("utf-8"))
+# print(len(list(result)))
+# print(result[0:5])
 
