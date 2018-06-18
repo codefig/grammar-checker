@@ -64,7 +64,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "Grammar Checker: PSG Algorithm", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Grammar Checker: SCG Algorithm", None))
         self.clearOutputBtn.setText(_translate("MainWindow", "CLEAR OUTPUT", None))
         self.clearInputBtn.setText(_translate("MainWindow", "CLEAR INPUTS", None))
 
