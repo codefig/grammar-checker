@@ -7,7 +7,6 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-from psglogic import perform_psg
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -64,26 +63,20 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "Grammar Checker: PSG Algorithm", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Grammar Checker Xbar", None))
         self.clearOutputBtn.setText(_translate("MainWindow", "CLEAR OUTPUT", None))
         self.clearInputBtn.setText(_translate("MainWindow", "CLEAR INPUTS", None))
 
     def clear_output(self):
-        self.textOutput.setPlainText("")
-        
+        print("This is the clear output function")
+
     def clear_input(self):
-        self.textInput.setPlainText("")
+        print("This is the clear input function")
 
     def checkInputOnChanged(self):
-    	grammar_result = perform_psg(self.textInput.toPlainText())
-    	if len(grammar_result) == 0:
-    		#the sentence has words, but its incorrect
-    		self.textOutput.setPlainText("Incorrect Grammar")
-    	elif grammar_result[0:5] == "Error":
-    		# value error has occured 
-    		self.textOutput.setPlainText(grammar_result)
-    	else:
-    		self.textOutput.setPlainText("Correct Grammar")
+        self.inputText = self.textInput.toPlainText()
+        print("This function checks if input changed by letters")
+        print(self.inputText)
 
 
 if __name__ == "__main__":

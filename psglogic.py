@@ -35,6 +35,8 @@ def perform_psg(sentence):
 		output = "Error : " + str(e)
 	return output
 
-result = perform_psg("bísọ́lá wọ ọkọ̀ náà")
-print(result)
+# result = perform_psg("bísọ́lá wọ wọ ọkọ̀ náà")
+# print(str(result).encode("utf-8"))
+# print(len(list(result)))
+# print(result[0:5])
 
