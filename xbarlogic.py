@@ -41,6 +41,9 @@ def perform_xbar(sentence):
                 output = "Error : " + str(e)
         return output
 
-result = perform_xbar("Iná n jó ní ẹ̀yìnkùnlé")
-print(result)
+# result = perform_xbar("Tóbi sè oúnje náà")
+result = perform_xbar("bísọ́lá  wọ ọkọ̀ náà")
+print(str(result).encode("utf-8"))
+print(len(list(result)))
+print(result[0:5])
 

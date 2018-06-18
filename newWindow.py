@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-from scglogic import perform_scg
+from xbarlogic import perform_xbar
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -75,7 +75,7 @@ class Ui_MainWindow(object):
         self.textInput.setPlainText("")
 
     def checkInputOnChanged(self):
-    	grammar_result = perform_scg(self.textInput.toPlainText())
+    	grammar_result = perform_xbar(self.textInput.toPlainText())
     	if len(grammar_result) == 0:
     		#the sentence has words, but its incorrect
     		self.textOutput.setPlainText("Incorrect Grammar")
